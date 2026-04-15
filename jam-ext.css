@@ -1,13 +1,13 @@
-/* jam-ext.css */
 body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #2a56a7, #0f708d);
-    color: white;
-    font-family: 'Arial', sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    backdrop-filter: blur(10px); /* efek blur */
 }
 
 .kotak-jam {
@@ -22,11 +22,24 @@ body {
 #tanggal {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #f1c40f; /* Warna kuning emas */
+    color: #0fcff1; /* Warna kuning emas */
 }
 
 #jam {
     font-size: 4rem;
     font-weight: bold;
     letter-spacing: 5px;
+    color: aliceblue;
+}
+
+/* Efek animasi kedip */
+#jam::after {
+    content: " ";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
 }
