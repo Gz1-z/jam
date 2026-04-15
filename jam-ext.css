@@ -30,6 +30,7 @@ body {
     font-weight: bold;
     letter-spacing: 5px;
     color: aliceblue;
+    text-shadow: 0 0 10px rgba(0, 225, 255, 0.7); /* efek glow */
 }
 
 /* Efek animasi kedip */
